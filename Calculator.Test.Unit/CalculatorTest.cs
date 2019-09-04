@@ -10,7 +10,7 @@ namespace Calculator.Test.Unit
     [TestFixture]
     public class CalculatorTest
     {
-        #region addition
+        #region addition tests
         // 3 tests of addition (start)
 
         [Test]
@@ -56,7 +56,7 @@ namespace Calculator.Test.Unit
         // 3 tests of addition (end)
         #endregion
 
-        #region subtraction
+        #region subtraction tests
         // 3 tests of subtraction (start)
 
         [Test]
@@ -72,15 +72,40 @@ namespace Calculator.Test.Unit
             Assert.That(uut.subtract(5, 3), Is.EqualTo(2));
         }
 
+        [Test]
+        public void subtract_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.subtract(2020, 2019);
+
+            // Assert
+            Assert.That(uut.subtract(2020, 2019), Is.EqualTo(1));
+        }
+
+        [Test]
+        public void subtract_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.subtract(123456789, 45678);
+
+            // Assert
+            Assert.That(uut.subtract(123456789, 45678), Is.EqualTo(123411111));
+        }
+
         // 3 tests of subtraction (end)
         #endregion subtraction
 
-
-        #region multiplication
+        #region multiplication tests
         // 3 tests of multiplication (start)
 
         [Test]
-        public void multiply_TwoNumbers_ReturnEquals()
+        public void multiply_TwoNumbers_ReturnEquals1()
         {
             // Arrange
             var uut = new Calc();
@@ -92,14 +117,85 @@ namespace Calculator.Test.Unit
             Assert.That(uut.multiply(2, 3), Is.EqualTo(6));
         }
 
+        [Test]
+        public void multiply_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(12345, 876);
+
+            // Assert
+            Assert.That(uut.multiply(12345, 876), Is.EqualTo(10814220));
+        }
+
+        [Test]
+        public void multiply_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(2020, 2020);
+
+            // Assert
+            Assert.That(uut.multiply(2020, 2020), Is.EqualTo(4080400));
+        }
+
         // 3 tests of multiplication (end)
         #endregion multiplication
 
-        #region power of
+        #region division test
+        // 3 tests of division (start)
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals1()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(9, 3);
+
+            // Assert
+            Assert.That(uut.divide(9, 3), Is.EqualTo(3));
+        }
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(8242408000, 2020);
+
+            // Assert
+            Assert.That(uut.divide(8242408000, 2020), Is.EqualTo(4080400));
+        }
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(420, 20);
+
+            // Assert
+            Assert.That(uut.divide(420, 20), Is.EqualTo(21));
+        }
+
+        // 3 tests of division (end)
+        #endregion division test
+
+        #region 'power of'tests
         // 3 tests of power of (start)
 
         [Test]
-        public void power_TwoNumbers_ReturnEquals()
+        public void power_TwoNumbers_ReturnEquals1()
         {
             // Arrange
             var uut = new Calc();
@@ -124,7 +220,27 @@ namespace Calculator.Test.Unit
             Assert.That(uut.power(5, 4), Is.EqualTo(625));
         }
 
+        [Test]
+        public void power_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.power(2020, 3);
+
+            // Assert
+            Assert.That(uut.power(2020, 3), Is.EqualTo(8242408000));
+        }
+
         // 3 tests of power of (end)
-        #endregion power of
+        #endregion 'power of'tests
+
+        #region accumulate tests
+
+
+
+
+        #endregion accumulate tests
     }
 }
