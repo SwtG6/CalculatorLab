@@ -248,7 +248,7 @@ namespace Calculator.Test.Unit
             uut.power(2020, 3);
 
             // Assert
-            Assert.That(uut.Accumulate, Is.EqualTo(8242408000));
+            Assert.That(uut.Accumulator, Is.EqualTo(8242408000));
         }
 
 
