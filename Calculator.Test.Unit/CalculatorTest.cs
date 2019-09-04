@@ -22,5 +22,18 @@ namespace Calculator.Test.Unit
             // Assert
             Assert.That(uut.add(2,3), Is.EqualTo(5));
         }
+
+        [Test]
+        public void subtract_TwoNumbers_ReturnEquals()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.subtract(2, 3);
+
+            // Assert
+            Assert.That(uut.subtract(5, 3), Is.EqualTo(2));
+        }
     }
 }
