@@ -30,10 +30,23 @@ namespace Calculator.Test.Unit
             var uut = new Calc();
 
             // Act
-            uut.subtract(2, 3);
+            uut.subtract(5, 3);
 
             // Assert
             Assert.That(uut.subtract(5, 3), Is.EqualTo(2));
+        }
+
+        [Test]
+        public void multiply_TwoNumbers_ReturnEquals()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(2, 3);
+
+            // Assert
+            Assert.That(uut.multiply(2, 3), Is.EqualTo(6));
         }
     }
 }
