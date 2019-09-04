@@ -237,9 +237,23 @@ namespace Calculator.Test.Unit
         #endregion 'power of'tests
 
         #region accumulate tests
+        // 3 tests of acc (start)
 
         [Test]
         public void accumulate_TwoNumbers_ReturnEquals1()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.add(10, 5);
+
+            // Assert
+            Assert.That(uut.add, Is.EqualTo(15));
+        }
+
+        [Test]
+        public void accumulate_TwoNumbers_ReturnEquals2()
         {
             // Arrange
             var uut = new Calc();
@@ -251,7 +265,18 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Accumulate, Is.EqualTo(8242408000));
         }
 
+        [Test]
+        public void accumulate_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
 
+            // Act
+            uut.divide(9, 3);
+
+            // Assert
+            Assert.That(uut.Accumulate, Is.EqualTo(3));
+        }
 
         #endregion accumulate tests
     }
