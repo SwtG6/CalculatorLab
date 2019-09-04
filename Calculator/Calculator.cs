@@ -10,7 +10,8 @@ namespace Calculator
     {
         public double add(double a, double b)
         {
-            return a + b;
+           
+            return Accumulator = a + b;
         }
 
         // public void GetAdd(double x)
@@ -20,22 +21,22 @@ namespace Calculator
 
         public double subtract(double a, double b)
         {
-            return a - b;
+            return Accumulator = a - b;
         }
 
         public double multiply(double a, double b)
         {
-            return a * b;
+            return Accumulator = a * b;
         }
 
         public double power(double x, double exp)
         {
-            return Math.Pow(x,exp);
+            return Accumulator = Math.Pow(x,exp);
         }
 
         public double divide(double a, double b)
         {
-            return a / b;
+            return Accumulator = a / b;
         }
 
         public double Accumulator { get; private set; }
