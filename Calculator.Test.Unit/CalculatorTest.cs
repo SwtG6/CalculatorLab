@@ -10,7 +10,7 @@ namespace Calculator.Test.Unit
     [TestFixture]
     public class CalculatorTest
     {
-        #region addition
+        #region addition tests
         // 3 tests of addition (start)
 
         [Test]
@@ -56,7 +56,7 @@ namespace Calculator.Test.Unit
         // 3 tests of addition (end)
         #endregion
 
-        #region subtraction
+        #region subtraction tests
         // 3 tests of subtraction (start)
 
         [Test]
@@ -106,7 +106,7 @@ namespace Calculator.Test.Unit
         // 3 tests of multiplication (start)
 
         [Test]
-        public void multiply_TwoNumbers_ReturnEquals()
+        public void multiply_TwoNumbers_ReturnEquals1()
         {
             // Arrange
             var uut = new Calc();
@@ -116,6 +116,32 @@ namespace Calculator.Test.Unit
 
             // Assert
             Assert.That(uut.multiply(2, 3), Is.EqualTo(6));
+        }
+
+        [Test]
+        public void multiply_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(12345, 876);
+
+            // Assert
+            Assert.That(uut.multiply(12345, 876), Is.EqualTo(10814220));
+        }
+
+        [Test]
+        public void multiply_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(2020, 2020);
+
+            // Assert
+            Assert.That(uut.multiply(2020, 2020), Is.EqualTo(4080400));
         }
 
         // 3 tests of multiplication (end)
