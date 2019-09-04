@@ -101,7 +101,6 @@ namespace Calculator.Test.Unit
         // 3 tests of subtraction (end)
         #endregion subtraction
 
-
         #region multiplication tests
         // 3 tests of multiplication (start)
 
@@ -147,6 +146,51 @@ namespace Calculator.Test.Unit
         // 3 tests of multiplication (end)
         #endregion multiplication
 
+        #region division test
+        // 3 tests of division (start)
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals1()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(9, 3);
+
+            // Assert
+            Assert.That(uut.divide(9, 3), Is.EqualTo(3));
+        }
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(8242408000, 2020);
+
+            // Assert
+            Assert.That(uut.divide(8242408000, 2020), Is.EqualTo(4080400));
+        }
+
+        [Test]
+        public void divide_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.divide(420, 20);
+
+            // Assert
+            Assert.That(uut.divide(420, 20), Is.EqualTo(21));
+        }
+
+        // 3 tests of division (end)
+        #endregion division test
+
         #region 'power of'tests
         // 3 tests of power of (start)
 
@@ -191,5 +235,12 @@ namespace Calculator.Test.Unit
 
         // 3 tests of power of (end)
         #endregion 'power of'tests
+
+        #region accumulate tests
+
+
+
+
+        #endregion accumulate tests
     }
 }
