@@ -48,5 +48,18 @@ namespace Calculator.Test.Unit
             // Assert
             Assert.That(uut.multiply(2, 3), Is.EqualTo(6));
         }
+
+        [Test]
+        public void power_TwoNumbers_ReturnEquals()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.power(3, 3);
+
+            // Assert
+            Assert.That(uut.power(3, 3), Is.EqualTo(9));
+        }
     }
 }
