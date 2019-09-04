@@ -102,7 +102,7 @@ namespace Calculator.Test.Unit
         #endregion subtraction
 
 
-        #region multiplication
+        #region multiplication tests
         // 3 tests of multiplication (start)
 
         [Test]
@@ -147,11 +147,11 @@ namespace Calculator.Test.Unit
         // 3 tests of multiplication (end)
         #endregion multiplication
 
-        #region power of
+        #region 'power of'tests
         // 3 tests of power of (start)
 
         [Test]
-        public void power_TwoNumbers_ReturnEquals()
+        public void power_TwoNumbers_ReturnEquals1()
         {
             // Arrange
             var uut = new Calc();
@@ -176,7 +176,20 @@ namespace Calculator.Test.Unit
             Assert.That(uut.power(5, 4), Is.EqualTo(625));
         }
 
+        [Test]
+        public void power_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.power(2020, 6);
+
+            // Assert
+            Assert.That(uut.power(2020, 6), Is.EqualTo(6.793729e+19));
+        }
+
         // 3 tests of power of (end)
-        #endregion power of
+        #endregion 'power of'tests
     }
 }
