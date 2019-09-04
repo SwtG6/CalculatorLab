@@ -238,6 +238,18 @@ namespace Calculator.Test.Unit
 
         #region accumulate tests
 
+        [Test]
+        public void accumulate_TwoNumbers_ReturnEquals1()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.power(2020, 3);
+
+            // Assert
+            Assert.That(uut.Accumulate, Is.EqualTo(8242408000));
+        }
 
 
 
