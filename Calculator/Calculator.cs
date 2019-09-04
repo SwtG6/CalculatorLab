@@ -10,7 +10,6 @@ namespace Calculator
     {
         public double add(double a, double b)
         {
-            Accumulator = add(a, b);
             return a + b;
         }
 
@@ -31,13 +30,11 @@ namespace Calculator
 
         public double power(double x, double exp)
         {
-            Accumulator = power(x, exp);
             return Math.Pow(x,exp);
         }
 
         public double divide(double a, double b)
         {
-            Accumulator = divide(a,b);
             return a / b;
         }
 
