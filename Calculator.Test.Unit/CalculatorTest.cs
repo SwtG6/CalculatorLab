@@ -112,7 +112,7 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void power_TwoNumbers_ReturnEquals()
+        public void power_TwoNumbers_ReturnEquals2()
         {
             // Arrange
             var uut = new Calc();
