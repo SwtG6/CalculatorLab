@@ -10,6 +10,7 @@ namespace Calculator
     {
         public double add(double a, double b)
         {
+            Accumulator = add(a, b);
             return a + b;
         }
 

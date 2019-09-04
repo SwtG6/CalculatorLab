@@ -14,7 +14,7 @@ namespace Calculator.Test.Unit
         // 3 tests of addition (start)
 
         [Test]
-        public void Add_TwoNumbers_ReturnEquals()
+        public void Add_TwoNumbers_ReturnEquals1()
         {
             // Arrange
             var uut = new Calc();
@@ -27,7 +27,7 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void Add_TwoNumbers_ReturnEquals()
+        public void Add_TwoNumbers_ReturnEquals2()
         {
             // Arrange
             var uut = new Calc();
@@ -40,7 +40,7 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void Add_TwoNumbers_ReturnEquals()
+        public void Add_TwoNumbers_ReturnEquals3()
         {
             // Arrange
             var uut = new Calc();
