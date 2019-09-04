@@ -183,10 +183,10 @@ namespace Calculator.Test.Unit
             var uut = new Calc();
 
             // Act
-            uut.power(2020, 6);
+            uut.power(2020, 3);
 
             // Assert
-            Assert.That(uut.power(2020, 6), Is.EqualTo(6.793729e+19));
+            Assert.That(uut.power(2020, 3), Is.EqualTo(8242408000));
         }
 
         // 3 tests of power of (end)
