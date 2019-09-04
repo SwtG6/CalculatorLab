@@ -72,6 +72,32 @@ namespace Calculator.Test.Unit
             Assert.That(uut.subtract(5, 3), Is.EqualTo(2));
         }
 
+        [Test]
+        public void subtract_TwoNumbers_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.subtract(2020, 2019);
+
+            // Assert
+            Assert.That(uut.subtract(2020, 2019), Is.EqualTo(1));
+        }
+
+        [Test]
+        public void subtract_TwoNumbers_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.subtract(123456789, 45678);
+
+            // Assert
+            Assert.That(uut.subtract(123456789, 45678), Is.EqualTo(123411111));
+        }
+
         // 3 tests of subtraction (end)
         #endregion subtraction
 
