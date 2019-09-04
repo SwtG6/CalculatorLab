@@ -18,7 +18,8 @@ namespace CalculatorApp
 
             Console.WriteLine("add {0} + {1} = {2} ", a, b, MyCalculator.add(a, b));
 
-            
+            Console.WriteLine($"{MyCalculator.subtract(8)}");
+
         }
     }
 }
