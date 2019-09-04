@@ -30,12 +30,21 @@ namespace Calculator
 
         public double power(double x, double exp)
         {
+            Accumulator = power(x, exp);
             return Math.Pow(x,exp);
         }
 
         public double divide(double a, double b)
         {
+            Accumulator = divide(a,b);
             return a / b;
+        }
+
+        public double Accumulator { get; private set; }
+
+        public void clear()
+        {
+            Accumulator = 0;
         }
     }
 }
