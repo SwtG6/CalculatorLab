@@ -249,7 +249,7 @@ namespace Calculator.Test.Unit
             uut.add(10, 5);
 
             // Assert
-            Assert.That(uut.add, Is.EqualTo(15));
+            Assert.That(uut.Accumulator, Is.EqualTo(15));
         }
 
         [Test]
@@ -275,7 +275,7 @@ namespace Calculator.Test.Unit
             uut.divide(9, 3);
 
             // Assert
-            Assert.That(uut.Accumulate, Is.EqualTo(3));
+            Assert.That(uut.Accumulator, Is.EqualTo(3));
         }
 
         #endregion accumulate tests
