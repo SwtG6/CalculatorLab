@@ -290,5 +290,54 @@ namespace Calculator.Test.Unit
         }
 
         #endregion accumulate tests
+
+        #region clear tests
+        // 3 tests of clear (start)
+
+        [Test]
+        public void clear_Acc_ReturnEquals1()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.add(10, 5);
+            uut.clear();
+
+            // Assert
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void clear_Acc_ReturnEquals2()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.multiply(12345, 678);
+            uut.clear();
+
+            // Assert
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void clear_Acc_ReturnEquals3()
+        {
+            // Arrange
+            var uut = new Calc();
+
+            // Act
+            uut.add(2020, 3);
+            uut.clear();
+
+            // Assert
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+
+        // 3 tests of clear (end)
+        #endregion clear tests
     }
 }
