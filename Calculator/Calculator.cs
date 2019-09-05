@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Calculator
 {
     public class Calc
@@ -54,7 +55,15 @@ namespace Calculator
 
         public double divide(double a, double b)
         {
-            return Accumulator = a / b;
+            if (b != 0)
+            {
+                return Accumulator = a / b;
+            }
+            else
+            {
+                throw new InvalidOperationException("Can't divide by 0");
+            }
+
         }
 
 

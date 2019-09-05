@@ -188,6 +188,17 @@ namespace Calculator.Test.Unit
             Assert.That(uut.divide(420, 20), Is.EqualTo(21));
         }
 
+        [Test]
+        public void divide_byZero_ThrowsException()
+        {
+            // Arrange
+            var uut = new Calc();
+
+
+            //Combined Act & Assert
+            Assert.That(() => uut.divide(4, 0), Throws.TypeOf<InvalidOperationException>());
+        }
+
         // 3 tests of division (end)
         #endregion division test
 
